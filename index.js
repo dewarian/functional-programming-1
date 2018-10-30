@@ -50,6 +50,34 @@ const detail = async (frabl, librarian) => {
 	})  
 }
 
+const availability = async (frabl) => {
+	return await client.get("availability", {
+		  frabl
+	})  
+}
+
+const getDetailForResult = async (result) => {
+	const resultId = result.frabl
+	const frablId = resultId.$t
+	const detailsData = await detail(frablId, true)
+
+	if(detailsData) {
+		console.log("Details", JSON.parse(detailsData))
+	}
+}
+
+
+const getAvailabilityForResult = async (result) => {
+	const resultId = result.frabl
+	const frablId = resultId.$t
+	const availabilityData = await availability(frablId)
+
+	if(availabilityData) {
+		console.log("Availability", JSON.parse(availabilityData))
+	}
+}
+
+
 (async () => {
 	try {
 		const searchData = await search("weer", "title", true)
@@ -61,16 +89,10 @@ const detail = async (frabl, librarian) => {
 			&& parsedData.aquabrowser.results.result
 			|| []
 			// console.log(parsedData)
-			results.map(async result => {
-				const resultId = result.frabl
-				const frablId = resultId.$t
-				const detailsData = await detail(frablId, true)
-
-				if(detailsData) {
-					console.log(JSON.parse(detailsData))
-				}
+			results.map(result => {
+				getDetailForResult(result)
+				getAvailabilityForResult(result)
 			})
-			// console.log(results)
 		}
 	} catch (error) {
 		throw new (error)

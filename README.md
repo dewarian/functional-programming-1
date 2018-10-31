@@ -42,6 +42,8 @@ Afterwards I tried to implement my code through theirs, but I'm still struggling
 
 Around noon Laurens en Titus gave us lectures about how to get certain parts out of the API and how you can use promises to access information at the same time out of different endpoints. 
 
+**Research questions**
+
 * Hoe is de verhouding qua publicatie tussen mannelijke en vrouwelijke auteurs veranderd, door de jaren heen?
     * Zit er een verschil tussen uitgevers in de bibliotheek, die meer werk publiceren van mannelijke auteurs dan vrouwlijke?
     * Zijn er uitgevers in de bibliotheek, die meer werk zijn gaan publiceren van vrouwelijke auteurs en uitgevers die nog steeds meer mannelijke auteurs vertegenwoordigen door de jaren heen?

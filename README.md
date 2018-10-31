@@ -34,6 +34,14 @@ I've come up with the following questions:
 
 #### Day 3 | 31 October 2018
 
+Today we discussed my first question in class and as a result came up with new questions! Then we also got the chance to discuss our questions with fellow classmates which helped with to look at things from another perspective. Obviously I also realized I formed a lot of 'yes' or 'no' questions, so I had to rephrase those, to make them sound better, but also to specify those question, as they are now quite abstract. 
+
+Then I did some more research in the data to find more deeper aspects to those question and to refine them. This part I really struggled with, because there are a lot of different variables in the dataset. Thankfully some classmates wrote some code, which made it a lot easier to browse through the data and another classmate wrote every meaning to the variables in the data. This made it all a lot clearer for me. 
+
+Afterwards I tried to implement my code through theirs, but I'm still struggling on that part. Moreover because I'm not exactly sure if I should implement my code through theirs... This is also a side effect, because I understand a large part of their code, but not all. Then I tried to search with more search words, unfortunately it broke... It is possible to make this work, so it's something I will keep working on until it works. 
+
+Around noon Laurens en Titus gave us lectures about how to get certain parts out of the API and how you can use promises to access information at the same time out of different endpoints. 
+
 * Hoe is de verhouding qua publicatie tussen mannelijke en vrouwelijke auteurs veranderd, door de jaren heen?
     * Zit er een verschil tussen uitgevers in de bibliotheek, die meer werk publiceren van mannelijke auteurs dan vrouwlijke?
     * Zijn er uitgevers in de bibliotheek, die meer werk zijn gaan publiceren van vrouwelijke auteurs en uitgevers die nog steeds meer mannelijke auteurs vertegenwoordigen door de jaren heen?
@@ -45,7 +53,7 @@ I've come up with the following questions:
     * 
 
 * Zijn er meer boeken of tijdschriften over technologie uitgegeven in de afgelopen vijf jaar en worden er meer coverimages gebruikt?
-    *
+    * 
 
 * Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden?
 

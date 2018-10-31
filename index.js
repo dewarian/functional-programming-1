@@ -18,7 +18,7 @@ const obaApi = new api({
 // possible parameters: q, librarian, refine, sort etc. check oba api documentation for all
 // possible filterKey: any higher order key in response object, like title returns only title objects instead of full data object
 obaApi.get("search", {
-	q: "harry potter&facet=type(book)",
+	q: "harry potter",
 	librarian: true,
 	refine: true
 }, "title").then(response => {

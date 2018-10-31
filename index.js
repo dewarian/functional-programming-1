@@ -80,7 +80,7 @@ const getAvailabilityForResult = async (result) => {
 
 (async () => {
 	try {
-		const searchData = await search("weer", "title", true)
+		const searchData = await search("technologie", "title", true)
 		
 		if (searchData) {
 			const parsedData = JSON.parse(searchData)
@@ -88,11 +88,11 @@ const getAvailabilityForResult = async (result) => {
 			&& parsedData.aquabrowser.results 
 			&& parsedData.aquabrowser.results.result
 			|| []
-			// console.log(parsedData)
-			results.map(result => {
-				getDetailForResult(result)
-				getAvailabilityForResult(result)
-			})
+			console.log(parsedData)
+			// results.map(result => {
+			// 	getDetailForResult(result)
+			// 	getAvailabilityForResult(result)
+			// })
 		}
 	} catch (error) {
 		throw new (error)

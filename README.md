@@ -22,6 +22,7 @@ So after I could access a lot more of the data than yesterday, I resort to spitt
 I've come up with the following questions:
 
 * Zit er een publicatie verschil tussen mannelijke en vrouwelijke auteurs, door de jaren heen?
+    * hoi
 
 * Hebben bepaalde uitgevers in specifieke jaren meer uitgegeven, dan in andere jaren?
 

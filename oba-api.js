@@ -16,7 +16,7 @@ module.exports = class api {
         return this.url + endpoint + "/?authorization=" + this.key + checkForParams
     }
     
-    get(endpoint, params = ", keySearch = ") {
+    get(endpoint, params = "", keySearch = "") {
         // console.log(queryToString(params).replace (/^/,"&"))
         return new Promise((resolve, reject) => {
             // Check if parameter is empty do nothing, otherwise add a & as prefix

@@ -11,8 +11,13 @@
   "author": "Chelsea Doeleman",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
     "dotenv": "^6.1.0",
-    "oba-api": "github:rijkvanzanten/node-oba-api"
+    "express": "^4.16.4",
+    "jsonpath": "^1.0.0",
+    "query-string": "^6.2.0",
+    "xml-to-json-promise": "0.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.5"

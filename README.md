@@ -52,11 +52,9 @@ Around noon Laurens en Titus gave us lectures about how to get certain parts out
 
 * Zijn er in bepaalde jaren meer boeken uitgegeven door specifieke uitgevers en hoe is dit gerelateerd aan gebeurtenissen in die periode?
     * Geven uitgevers meer boeken uit van een bepaald genre en is dit gerelateerd aan bepaalde periodes?
-    * 
 
 * Zijn er meer boeken of tijdschriften over technologie uitgegeven in de afgelopen vijf jaar en worden er meer coverimages gebruikt?
-    * 
 
-* Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden?
+* Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden is er een verband met de uitgevers?
 
-* Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties?
+* Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties en is dit in verband met het jaar van uitgave?

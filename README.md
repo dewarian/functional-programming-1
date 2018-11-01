@@ -68,12 +68,12 @@ Around noon Laurens en Titus gave us lectures about how to get certain parts out
 
 1. Find out how facets work.
 2. Sort through the data to find if all variables are accessable.
-    a. Make sure to only get all the books in the Api.
-    b. All the books need to be in dutch.
-    c. Find all the authors.
-    d. Find the different publishers.
-    e. Sort through all the publication years of these authors.
-    f. Is there a connection with events?
-    g. Use another Api with the most popular male and female firstnames.
+    * Make sure to only get all the books in the Api.
+    * All the books need to be in dutch.
+    * Find all the authors.
+    * Find the different publishers.
+    * Sort through all the publication years of these authors.
+    * Is there a connection with events?
+    * Use another Api with the most popular male and female firstnames.
 3. Try to use more keySearch words, to make the results more clearer. 
 4. Store results in a New Object

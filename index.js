@@ -7,8 +7,8 @@ const app = express()
 const port = 3000
 
 const obaApi = new api({
-  	url: "https://zoeken.oba.nl/api/v1/",
-  	key: process.env.PUBLIC
+  url: "https://zoeken.oba.nl/api/v1/",
+  key: process.env.PUBLIC
 })
 
 // Search for method, params and than optional where you wanna find something
@@ -17,27 +17,19 @@ const obaApi = new api({
 // possible endpoints: search (needs "q" parameter) | details (needs a "frabl" parameter) | availability (needs a "frabl" parameter) | holdings/root | index/x (where x = facet type (like "book" ))
 // possible parameters: q, librarian, refine, sort etc. check oba api documentation for all
 // possible filterKey: any higher order key in response object, like title returns only title objects instead of full data object
-
-// const searchParams = 
-
 obaApi.get("search", {
-  	q: "title:harry potter",
-  	librarian: true,
-  	refine: true,
-	facet: ["type(book)", "auteur(J.K. Rowling)"]
-	// count: 20,
-	// rctx: "AS3JPQ6CMBiA4a8iIcQDOLjoYAIuKJHFE3gA40paWktj5eezKDh5HM@g7IF0ZxB@xvd5CVgDcGARlqxe1lzX4TnZ7TPZpBd$ksxYBNwDVRmxYGqU0WKVUsRmXOTGCPR@4W0$x@8jcYZJzAWrJKeGugYr0YFWDCkqmn1hpGIUybEQWFAp7HDeg9u2jdqod30R4j1m9vp57wM4OaMAMAkwz02gVVkpHnTmVKjBzjR5Aw==" 
+  q: "harry potter",
+  librarian: true,
+  refine: true,
+  facet: ["type(book)", "auteur(J.K. Rowling)"]
 }).then(response => {
 
+  // response ends up here
+  console.log(response)
 
-// obaApi.get("search", parameters, categories).then(response => {
-
-// })
-
-  	console.log(response)
-
-  	app.get("/", (request, response) => response.json(response))
-  	app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
+  // Make server with the response on the port
+  app.get("/", (req, res) => res.json(response))
+  app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
 })
 
 

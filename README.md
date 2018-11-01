@@ -48,7 +48,7 @@ Around noon Laurens en Titus gave us lectures about how to get certain parts out
     * Zit er een verschil tussen uitgevers in de bibliotheek, die meer werk publiceren van mannelijke auteurs dan vrouwelijke?
     * Zijn er uitgevers in de bibliotheek, die meer werk zijn gaan publiceren van vrouwelijke auteurs en uitgevers die nog steeds meer mannelijke auteurs vertegenwoordigen door de jaren heen?
     * Heeft de oba meer vrouwelijke, dan mannelijke auteurs in hun catalogus en is dit in verband met het aantal uitgevers die zich binnen de Oba bevinden?
-    * In de periode dat de feministsche golf op gang kwam, zijn er toen 
+    * In de periode dat de feministsche golf op gang kwam, zijn er toen meer boeken uitgekomen, die geschreven zijn door vrouwen of meer boeken over het feminisme zelf?
 
 * Zijn er in bepaalde jaren meer boeken uitgegeven door specifieke uitgevers en hoe is dit gerelateerd aan gebeurtenissen in die periode?
     * Geven uitgevers meer boeken uit van een bepaald genre en is dit gerelateerd aan bepaalde periodes?
@@ -59,3 +59,4 @@ Around noon Laurens en Titus gave us lectures about how to get certain parts out
 * Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden is er een verband met de uitgevers?
 
 * Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties en is dit in verband met het jaar van uitgave?
+    * Zijn deze boeken ook gesorteerd op geslacht?

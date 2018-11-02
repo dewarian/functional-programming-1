@@ -34,7 +34,8 @@ const search = async (q, facet) => {
 
 		if (searchData) {
 			const results = helpers.getResultsFromSearchData(searchData)
-			console.log(results)
+			const transformedResults = helpers.getTransformedResultFromResults(results)
+			console.log(transformedResults)
 			// const parsedData = JSON.parse(searchData)
 			// const results = parsedData.aquabrowser 
 			// && parsedData.aquabrowser.results 

@@ -5,7 +5,7 @@
   "description": "oba API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch index.js"
+    "start": "nodemon --watch index.js --watch helpers.js"
   },
   "keywords": [],
   "author": "Chelsea Doeleman",

@@ -73,7 +73,6 @@ Around noon Laurens en Titus gave us lectures about how to get certain parts out
     * Find all the authors.
     * Find the different publishers.
     * Sort through all the publication years of these authors.
-    * Is there a connection with events?
     * Use another Api with the most popular male and female firstnames.
 3. Try to use more keySearch words, to make the results more clearer. 
 4. Store results in a New Object

@@ -1,14 +1,15 @@
 require("dotenv").config()
 
 const api = require("./oba-api.js")
-const chalk = require("chalk");
+const chalk = require("chalk")
 const express = require("express")
 const app = express()
 const port = 3000
+const helpers = require ("./helpers.js")
 
 const obaApi = new api({
-  url: "https://zoeken.oba.nl/api/v1/",
-  key: process.env.PUBLIC
+  	url: "https://zoeken.oba.nl/api/v1/",
+  	key: process.env.PUBLIC
 })
 
 // Search for method, params and than optional where you wanna find something
@@ -17,20 +18,72 @@ const obaApi = new api({
 // possible endpoints: search (needs "q" parameter) | details (needs a "frabl" parameter) | availability (needs a "frabl" parameter) | holdings/root | index/x (where x = facet type (like "book" ))
 // possible parameters: q, librarian, refine, sort etc. check oba api documentation for all
 // possible filterKey: any higher order key in response object, like title returns only title objects instead of full data object
-obaApi.get("search", {
-  q: "harry potter",
-  librarian: true,
-  refine: true,
-  facet: ["type(book)", "auteur(J.K. Rowling)"]
-}).then(response => {
 
-  // response ends up here
-  console.log(response)
+const search = async (q, facet) => {
+  	return await obaApi.get("search", {
+  	  	q,
+		librarian: true,
+		refine: true,
+		facet
+  	})  
+}
 
-  // Make server with the response on the port
-  app.get("/", (req, res) => res.json(response))
-  app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
-})
+(async () => {
+	try {
+		const { data: searchData } = await search("harry potter", ["type(book)", "auteur(J.K. Rowling)"])
+
+		if (searchData) {
+			const results = helpers.getResultsFromSearchData(searchData)
+			console.log(results)
+			// const parsedData = JSON.parse(searchData)
+			// const results = parsedData.aquabrowser 
+			// && parsedData.aquabrowser.results 
+			// && parsedData.aquabrowser.results.result
+			// || []
+			// console.log(parsedData)
+			// results.map(result => {
+			// 	getDetailForResult(result)
+			// 	getAvailabilityForResult(result)
+			// })
+			app.get("/", (req, res) => res.json(searchData))
+			app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
+		}
+	} catch (error) {
+		throw new Error(error)
+	}
+})()
+
+// obaApi.get("search", {
+//   	q: "harry potter",
+//   	librarian: true,
+//   	refine: true,
+//   	facet: ["type(book)", "auteur(J.K. Rowling)"]
+//   	// count: 20,
+// 	// rctx:
+// }).then(response => {
+
+	// response.map(result => {
+		
+	// 	return 
+	// })
+	// map over resultaten na 20 resultaten nieuwe request naar pagina nummer + 1
+
+	// let publicers = getPublicers(response)
+	// let authors = getAuthors(response)
+	// let dataStore = storeSomeFields(response)
+
+  	// response ends up here
+//   	console.log(response)
+
+//   	// Make server with the response on the port
+//   	app.get("/", (req, res) => res.json(response))
+//   	app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
+// })
+
+// function getPublicers(data){
+// 	let publicers = data.map(publicer => publicer.publicers)
+// 	console.log()
+// }
 
 
 
@@ -116,23 +169,3 @@ obaApi.get("search", {
 // }
 
 
-// (async () => {
-// 	try {
-// 		const searchData = await search("technologie", "title", true)
-
-// 		if (searchData) {
-// 			const parsedData = JSON.parse(searchData)
-// 			const results = parsedData.aquabrowser 
-// 			&& parsedData.aquabrowser.results 
-// 			&& parsedData.aquabrowser.results.result
-// 			|| []
-// 			console.log(parsedData)
-// 			// results.map(result => {
-// 			// 	getDetailForResult(result)
-// 			// 	getAvailabilityForResult(result)
-// 			// })
-// 		}
-// 	} catch (error) {
-// 		throw new (error)
-// 	}
-// })()

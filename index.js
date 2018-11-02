@@ -1,3 +1,4 @@
+// Shoutout naar Folkert, Dennis en Daniël van de Velde
 require("dotenv").config()
 
 const api = require("./oba-api.js")
@@ -19,18 +20,22 @@ const obaApi = new api({
 // possible parameters: q, librarian, refine, sort etc. check oba api documentation for all
 // possible filterKey: any higher order key in response object, like title returns only title objects instead of full data object
 
-const search = async (q, facet) => {
+const search = async (q, facet, count) => {
   	return await obaApi.get("search", {
   	  	q,
 		librarian: true,
 		refine: true,
-		facet
+		facet,
+		count
   	})  
 }
 
+
 (async () => {
 	try {
-		const { data: searchData } = await search("harry potter", ["type(book)", "auteur(J.K. Rowling)"])
+		const { data: searchData } = await search("harry potter", ["type(book)", "language(dut)", "auteur(J.K. Rowling)"], 20)
+		// ("harry potter", ["type(book)", "auteur(J.K. Rowling)"])
+		// meerdere facetten toevoegen thanks to Jessie
 
 		if (searchData) {
 			const results = helpers.getResultsFromSearchData(searchData)

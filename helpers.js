@@ -35,13 +35,23 @@ const getPublicationYearFromResult = (result) => {
         || undefined
 }
 
+const getLanguageFromResult = (result) => {
+    return result.languages
+        && result.languages[0]
+        && result.languages[0].language
+        && result.languages[0].language[0]
+        && result.languages[0].language[0]._
+        || undefined
+}
+
 const getTransformedResultFromResults = (results) => {
     return results 
         ? results.map(result => {
             return {
                 author: getAuthorFromResult(result),
                 publisher: getPublisherFromResult(result),
-                publicationYear: getPublicationYearFromResult(result)
+                publicationYear: getPublicationYearFromResult(result),
+                language: getLanguageFromResult(result)
             }
         }) 
         : []

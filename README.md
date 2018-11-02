@@ -64,6 +64,9 @@ Around noon Laurens en Titus gave us lectures about how to get certain parts out
 
 #### Day 4 | 1 November 2018
 
+**Hypotheses**
+Uitgevers publiceren vaker boeken van mannelijke auteurs, dan vrouwelijke auteurs.
+
 **Roadmap**
 
 1. Find out how facets work.

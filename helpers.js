@@ -1,3 +1,4 @@
+// Shout out naar Maikel voor het helpen
 const getResultsFromSearchData = (searchData) => {
     return searchData.aquabrowser 
         && searchData.aquabrowser.results 

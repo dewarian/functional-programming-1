@@ -1,4 +1,4 @@
-// Shoutout naar Folkert, Dennis en Daniël van de Velde
+// Shout out naar Folkert, Dennis en Daniël van de Velde
 require("dotenv").config()
 
 const api = require("./oba-api.js")
@@ -13,27 +13,21 @@ const obaApi = new api({
   	key: process.env.PUBLIC
 })
 
-// Search for method, params and than optional where you wanna find something
-// returns first 20 items
-// obaApi.get(endpoint, params, filterKey)
-// possible endpoints: search (needs "q" parameter) | details (needs a "frabl" parameter) | availability (needs a "frabl" parameter) | holdings/root | index/x (where x = facet type (like "book" ))
-// possible parameters: q, librarian, refine, sort etc. check oba api documentation for all
-// possible filterKey: any higher order key in response object, like title returns only title objects instead of full data object
 
-const search = async (q, facet, count) => {
+const search = async (q, facet, page) => {
   	return await obaApi.get("search", {
   	  	q,
 		librarian: true,
 		refine: true,
 		facet,
-		count
+		page
   	})  
 }
 
 
 (async () => {
 	try {
-		const { data: searchData } = await search("harry potter", ["type(book)", "language(dut)", "auteur(J.K. Rowling)"], 20)
+		const { data: searchData } = await search("harry potter", ["type(book)", "language(dut)", "auteur(J.K. Rowling)"], 2)
 		// ("harry potter", ["type(book)", "auteur(J.K. Rowling)"])
 		// meerdere facetten toevoegen thanks to Jessie
 
@@ -51,6 +45,11 @@ const search = async (q, facet, count) => {
 			// 	getDetailForResult(result)
 			// 	getAvailabilityForResult(result)
 			// })
+			// const dataWrapper = {
+			// 	"results": transformedResults
+			// }
+
+			// app.get("/", (req, res) => res.json(JSON.parse(dataWrapper)))
 			app.get("/", (req, res) => res.json(searchData))
 			app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
 		}

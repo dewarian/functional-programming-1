@@ -1,6 +1,72 @@
 # Oba
 
 
+## Research
+
+
+### Orientatie
+
+Door tegen de Api aan te praten heb ik bekeken welke verschillende variabelen zich in de data bevinden en wat interessante uitgangspunten kunnen zijn. Helaas was de Api best wel onoverzichtelijk, maar dankzij de [readme van Daniël van de Velde](https://github.com/DanielvandeVelde/functional-programming/blob/master/README.md) heb ik uiteindelijk alsnog een goed overzicht kunnen krijgen van de data en vervolgens onderzoeksvragen kunnen opstellen.
+
+### Onderzoeksvragen
+
+* Hoe is de verhouding qua publicatie tussen mannelijke en vrouwelijke auteurs veranderd, door de jaren heen?
+    * Zit er een verschil tussen uitgevers in de bibliotheek, die meer werk publiceren van mannelijke auteurs dan vrouwelijke?
+    * Zijn er uitgevers in de bibliotheek, die meer werk zijn gaan publiceren van vrouwelijke auteurs en uitgevers die nog steeds meer mannelijke auteurs vertegenwoordigen door de jaren heen?
+    * Heeft de oba meer vrouwelijke, dan mannelijke auteurs in hun catalogus en is dit in verband met het aantal uitgevers die zich binnen de Oba bevinden?
+    * In de periode dat de feministsche golf op gang kwam, zijn er toen meer boeken uitgekomen, die geschreven zijn door vrouwen of meer boeken over het feminisme zelf?
+
+* Zijn er in bepaalde jaren meer boeken uitgegeven door specifieke uitgevers en hoe is dit gerelateerd aan gebeurtenissen in die periode?
+    * Geven uitgevers meer boeken uit van een bepaald genre en is dit gerelateerd aan bepaalde periodes?
+
+* Zijn er meer boeken of tijdschriften over technologie uitgegeven in de afgelopen vijf jaar en worden er meer coverimages gebruikt?
+    * Worden er steeds meer coverimages gebruikt door de jaren heen en is er een verband met de uitgevers?
+
+* Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden is er een verband met de uitgevers?
+
+* Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties en is dit in verband met het jaar van uitgave?
+    * Zijn deze boeken ook gesorteerd op geslacht?
+
+
+
+Ik wil mij graag focussen op het verschil bij uitgevers tussen mannelijke en vrouwelijke auteurs en hoe dit door de jaren heen is veranderd. Mijn verwachtingen zijn dat er nog steeds meer mannelijk auteurs worden gerepresenteerd door uitgevers, maar dat er wel een stijgende lijn is te vinden bij vrouwelijke auteurs. 
+
+Daarnaast lijkt mij ook interessant om uit te zoeken welke uitgevers, meer young-adult boeken uitbrengen en of dit over het algemeen meer vrouwelijke auteurs zijn dan mannelijke. 
+
+
+**Hoofdvraag**
+
+Hoe ziet de verdeling tussen mannelijke en vrouwelijke auteurs eruit in vergelijking met verschillende uitgevers, door de jaren heen? 
+
+
+**Hypothese**
+
+De afgelopen vijf zijn het aantal vrouwelijke auteurs sterk toegenomen onder verschillende uitgevers, hoewel het aantal nog steeds niet mannelijke auteurs overtreft.
+
+
+### Data
+
+Voor dit onderzoek heb ik de volgende data nodig uit de Api:
+    * Alleen alle data over boeken in de bibliotheek
+    * De verschillende auteurs
+    * De verschillende uitgevers
+    * De boeken van de afgelopen vijf jaar. Dus het publicatiejaar.
+
+Andere bronnen:
+    * Overzicht van namen van alle vrouwelijke en mannelijke auteurs, waarbij het geslacht ook bekend is.
+
+
+### Mogelijke visualisaties
+
+
+
+### Bronnen
+
+* Oba Api
+
+
+
+
 ## Proces 
 
 

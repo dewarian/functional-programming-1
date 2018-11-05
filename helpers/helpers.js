@@ -1,12 +1,5 @@
 // Shout out naar Maikel voor het helpen
 
-// const getResultsFromSearchData = (searchData) => {
-//     return searchData.aquabrowser 
-//         && searchData.aquabrowser.results
-//         && searchData.aquabrowser.results.result
-//         || []
-// }
-
 const getAuthorFromResult = (result) => {
     return result.authors
         && result.authors["main-author"]

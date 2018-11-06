@@ -145,3 +145,25 @@ Uitgevers publiceren vaker boeken van mannelijke auteurs, dan vrouwelijke auteur
     * Use another Api with the most popular male and female firstnames.
 3. Try to use more keySearch words, to make the results more clearer. 
 4. Store results in a New Object
+
+On this day I completed step one and two, but didn't get to step three and four. I spend the day mainly trying to get all the data from the api, that I needed to answer my research question. 
+
+
+#### Day 5 | 2 November 2018
+
+
+
+
+#### Day 4 | 1 November 2018
+
+
+#### Day 4 | 1 November 2018
+
+
+#### Day 4 | 1 November 2018
+
+
+#### Day 4 | 1 November 2018
+
+
+#### Day 4 | 1 November 2018

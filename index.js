@@ -15,30 +15,43 @@ const obaApi = new obaWrapper({
 })
 
 
-const search = async (q, facet, page) => {
+const search = async (q, facet) => {
   	return await obaApi.get("search", {
   	  	q,
 		librarian: true,
 		refine: true,
 		facet,
-		page,
-		count: 200
+		count: 50,
+		filter: (result) => {
+			const publicationYear = helpers.getPublicationYearFromResult(result)
+			const currentYear = new Date().getFullYear()
+
+			return publicationYear >= currentYear - 5 
+		}
   	})  
 }
+
+// Datastructuur omvormen in een platte vorm. 
+// Data structuur is plat
+
+// van books naar objects op basis van jaartallen
+// map over jaartallen, om achter de count te komen.
+// 
 
 
 (async () => {
 	try {
-		const results = await search("harry potter", ["type(book)", "language(dut)", "auteur(J.K. Rowling)"], 2)
+		const results = await search("language:dut", "type(book)")
 		// ("harry potter", ["type(book)", "auteur(J.K. Rowling)"])
 		// meerdere facetten toevoegen thanks to Jessie
 
 		if (results) {
 			const transformedResults = helpers.getTransformedResultFromResults(results)
-			console.log(transformedResults)
+			const sortedTranformedResults = helpers.yearOfPublicationSorted(transformedResults)
+			console.log(sortedTranformedResults)
 			
 			const dataWrapper = {
-				"results": transformedResults
+				"results": sortedTranformedResults
 			}
 
 			app.get("/", (req, res) => res.json(dataWrapper))

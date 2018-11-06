@@ -16,6 +16,7 @@ function sanitizeOptionObject (options, page, rctx) {
 	if (page) {
 		safeOptions.page = page;
 	}
+	console.log(console.log("Page:", page, "Context:", (rctx || "Null").slice(0, 15)))
 	return safeOptions;
 }
 

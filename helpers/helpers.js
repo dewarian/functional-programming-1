@@ -1,5 +1,7 @@
 // Shout out naar Maikel voor het helpen
 
+const _range = require ("lodash.range")
+
 const getAuthorFromResult = (result) => {
     return result.authors
         && result.authors["main-author"]
@@ -30,6 +32,29 @@ const getLanguageFromResult = (result) => {
         || undefined
 }
 
+const yearOfPublicationSorted = (books) => {
+    const currentYear = new Date().getFullYear(books)    
+    const yearsOfPublication = _range(currentYear - 5, currentYear + 1)
+
+    return yearsOfPublication.map (year => ({
+        [year]: books 
+        ? books.filter(book => book.publicationYear === year)
+        : null
+    }))
+}
+
+const getFilterdGender = {};
+
+function getGenderFromName (firstname) {
+	if (Object.keys(getFilterdGender ).length <= 0) {
+		Object.assign(getFilterdGender , JSON.parse(fs.readFileSync("../names.json", "utf8")));
+	}
+	const man = getFilterdGender .mannen.find(name => name === firstname);
+	const vrouw = getFilterdGender .vrouwen.find(name => name === firstname);
+	if (!(man || vrouw) || man && vrouw) return null;
+	return (man && "Man") || (vrouw && "Vrouw");
+}
+
 const getTransformedResultFromResults = (results) => {
     return results 
         ? results.map(result => ({
@@ -42,6 +67,6 @@ const getTransformedResultFromResults = (results) => {
 }
 
 
-module.exports = {getTransformedResultFromResults}
+module.exports = {getTransformedResultFromResults, getPublicationYearFromResult, yearOfPublicationSorted}
 
 

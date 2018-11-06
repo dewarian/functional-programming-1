@@ -146,24 +146,33 @@ Uitgevers publiceren vaker boeken van mannelijke auteurs, dan vrouwelijke auteur
 3. Try to use more keySearch words, to make the results more clearer. 
 4. Store results in a New Object
 
-On this day I completed step one and two, but didn't get to step three and four. I spend the day mainly trying to get all the data from the api, that I needed to answer my research question. 
+On this day I completed step one and two, but didn't get to step three and four. I spend the day mainly trying to get all the data from the api, that I needed to answer my research question. Tim did explain to me how I should go about completing step three and four. I understand the logic of it and know what needs to be done, all that remains to be done is writing the code, which I reckon is one of my weaknesses. 
 
 
 #### Day 5 | 2 November 2018
 
+On this day I continued working on step three and four, with help from Maikel, I finally managed to complete those tasks around midday. Then we got a lecture about Observable and D3, which was awesome! I can't wait to work with D3, because it looks so cool! Observable is also mighty handy, because you have these examples which can be edited and it's amazing! The remainder of the day I helped Jessie and Linda with their code to make sure they would only get their needed results out of the Api and browsed through Obeservable. 
 
 
-
-#### Day 4 | 1 November 2018
-
-
-#### Day 4 | 1 November 2018
+### Week 2
 
 
-#### Day 4 | 1 November 2018
+#### Day 6 | 5 November 2018
+
+Today we got another lecture by Rejo of Bits of Freedom, the talk was quite long, but very interesting. Afterwards I gained a lot of new insights into the privacy problem, because it will continue to be a problem when do not decide to choose another path. Afterwards together with Jessie and some help from Daniël I tried to get more than 20 results from the Api. The wrapper that returned more than 20 results was written by Wouter and very understandable code! Also, it worked! I also made some sketches about what I want my visualization to look like, but in the end I had hard time coming up with something creative. The only thing I thought would be nice to create with D3, will probably be a step too far, at the moment. But who knows, maybe I will create it, when I aquire the right skills. For now I just stayed with an old trusty line chart.
+
+#### Day 7 | 6 November 2018
+
+I started off with trying to sort the data and trying to get data of a certain timespan out of the Api. Because my research is going to be based on the last five years. Around midday I got all the data back, then together with Maikel we tried to change our datastructure so it could be easily implemented in D3. This was easier said than done obviously. We knew what had to happen, now only to realise it... 
+
+Afterwards the Api didn't work anymore, not that it actually broke, but my code didn't go together with the Api anymore. Maybe because of some changes they made in the Api and decided to update it? However blind coding was kinda out of the question, because then I really wouldn't have a clue as to what went wrong... Seemend like wasted time to me, so I decided to look up some D3 tutorials. By browsing through Observable and toying with the code and watching Youtube video's. 
+
+#### Day 8 | 7 November 2018
 
 
-#### Day 4 | 1 November 2018
+#### Day 9 | 8 November 2018
 
 
-#### Day 4 | 1 November 2018
+#### Day 10 | 9 November 2018
+
+Assessment day

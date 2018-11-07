@@ -57,6 +57,27 @@ const getGenderFromName = (firstname) => {
 	return (man && "Man") || (vrouw && "Vrouw");
 }
 
+const getNameAndGender = (author) => {
+    const authorFirstNameLastName = author.split(', ')
+    let firstName = authorFirstNameLastName[1]
+    const firstDot = firstName && firstName.indexOf(".")
+    const hasDots = firstDot !== -1
+    const transformedFirstName = getTransformedFirstName()
+    const nameToUse = hasDots ? transformedFirstName : firstName
+    return {
+    	name: nameToUse,
+        gender: getGenderFromName(nameToUse),
+    }
+}
+
+const getTransformedFirstName = (hasDots, firstName, firstDot) => {
+    const removeStartIndex = hasDots ? firstDot - 1 : undefined
+    const endIndex = firstName && firstName.length
+    const tokensToRemove = firstName && removeStartIndex !== undefined && firstName.slice(removeStartIndex, endIndex)
+    const transformedFirstName = tokensToRemove && firstName.replace(tokensToRemove, '').trim()
+    return transformedFirstName
+}
+
 const getTransformedResultFromResults = (results) => {
     return results 
         ? results.map(result => ({
@@ -74,7 +95,8 @@ module.exports = {
     getPublicationYearFromResult, 
     yearOfPublicationSorted, 
     getGenderFromName, 
-    getAuthorFromResult
+    getAuthorFromResult,
+    getNameAndGender
 }
 
 

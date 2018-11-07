@@ -48,15 +48,13 @@ const search = async (q, facet) => {
 		if (results) {
 			const transformedResults = helpers.getTransformedResultFromResults(results)
 			const authors = transformedResults.map(result => result.author)
-			const transformedAuthors = authors.map(author => {
-				const firstName = author.split(", ")[1]
-				// console.log(firstName)
-				return {
-					name: firstName,
-					gender: helpers.getGenderFromName(firstName),
-				}
+			const transformedAuthors = authors.map(helpers.getNameAndGender)
+
+			const filterTransformedAuthors = transformedAuthors.filter(transformedAuthor => {
+				return transformedAuthor.name && transformedAuthor.gender
 			})
-			console.log(transformedAuthors)
+			console.log(filterTransformedAuthors)
+			// console.log(transformedAuthors)
 			const sortedTranformedResults = helpers.yearOfPublicationSorted(transformedResults)
 			console.log(sortedTranformedResults)
 			

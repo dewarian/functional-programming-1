@@ -7,7 +7,7 @@ const express = require("express")
 const app = express()
 const port = 3000
 const helpers = require("./helpers/helpers.js")
-const obaWrapper = require("./helpers/obawrapper.js")
+const obaWrapper = require("node-oba-api-wrapper")
 
 const obaApi = new obaWrapper({
 	public: process.env.PUBLIC,
@@ -21,12 +21,12 @@ const search = async (q, facet) => {
 		librarian: true,
 		refine: true,
 		facet,
-		count: 50,
+		count: 20,
 		filter: (result) => {
 			const publicationYear = helpers.getPublicationYearFromResult(result)
 			const currentYear = new Date().getFullYear()
 
-			return publicationYear >= currentYear - 5 
+			return publicationYear >= currentYear - 5
 		}
   	})  
 }
@@ -38,7 +38,7 @@ const search = async (q, facet) => {
 // map over jaartallen, om achter de count te komen.
 // 
 
-
+// Shout out naar Maikel
 (async () => {
 	try {
 		const results = await search("language:dut", "type(book)")
@@ -47,6 +47,16 @@ const search = async (q, facet) => {
 
 		if (results) {
 			const transformedResults = helpers.getTransformedResultFromResults(results)
+			const authors = transformedResults.map(result => result.author)
+			const transformedAuthors = authors.map(author => {
+				const firstName = author.split(", ")[1]
+				// console.log(firstName)
+				return {
+					name: firstName,
+					gender: helpers.getGenderFromName(firstName),
+				}
+			})
+			console.log(transformedAuthors)
 			const sortedTranformedResults = helpers.yearOfPublicationSorted(transformedResults)
 			console.log(sortedTranformedResults)
 			

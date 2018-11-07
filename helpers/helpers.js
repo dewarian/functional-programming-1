@@ -43,17 +43,17 @@ const yearOfPublicationSorted = (books) => {
     }))
 }
 
-const getFilterdGender = {};
+// const getFilterdGender = {};
 
-function getGenderFromName (firstname) {
-	if (Object.keys(getFilterdGender ).length <= 0) {
-		Object.assign(getFilterdGender , JSON.parse(fs.readFileSync("../names.json", "utf8")));
-	}
-	const man = getFilterdGender .mannen.find(name => name === firstname);
-	const vrouw = getFilterdGender .vrouwen.find(name => name === firstname);
-	if (!(man || vrouw) || man && vrouw) return null;
-	return (man && "Man") || (vrouw && "Vrouw");
-}
+// function getGenderFromName (firstname) {
+// 	if (Object.keys(getFilterdGender ).length <= 0) {
+// 		Object.assign(getFilterdGender , JSON.parse(fs.readFileSync("../names.json", "utf8")));
+// 	}
+// 	const man = getFilterdGender .mannen.find(name => name === firstname);
+// 	const vrouw = getFilterdGender .vrouwen.find(name => name === firstname);
+// 	if (!(man || vrouw) || man && vrouw) return null;
+// 	return (man && "Man") || (vrouw && "Vrouw");
+// }
 
 const getTransformedResultFromResults = (results) => {
     return results 

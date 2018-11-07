@@ -64,6 +64,13 @@ Andere bronnen:
 
 * Oba Api
 
+### Credits
+
+* Folkert-Jan
+* Daniël van de Velde
+* Wouter 
+* Maikel
+* Tim
 
 
 

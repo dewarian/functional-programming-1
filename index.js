@@ -1,7 +1,7 @@
 // Shout out naar Folkert, Dennis en Daniël van de Velde
 require("dotenv").config()
 
-
+const fs = require("fs")
 const chalk = require("chalk")
 const express = require("express")
 const app = express()
@@ -21,22 +21,15 @@ const search = async (q, facet) => {
 		librarian: true,
 		refine: true,
 		facet,
-		count: 20,
+		count: 500,
 		filter: (result) => {
 			const publicationYear = helpers.getPublicationYearFromResult(result)
 			const currentYear = new Date().getFullYear()
 
-			return publicationYear >= currentYear - 5
+			return publicationYear >= currentYear - 30
 		}
   	})  
 }
-
-// Datastructuur omvormen in een platte vorm. 
-// Data structuur is plat
-
-// van books naar objects op basis van jaartallen
-// map over jaartallen, om achter de count te komen.
-// 
 
 // Shout out naar Maikel
 (async () => {
@@ -53,17 +46,51 @@ const search = async (q, facet) => {
 			const filterTransformedAuthors = transformedAuthors.filter(transformedAuthor => {
 				return transformedAuthor.name && transformedAuthor.gender
 			})
-			console.log(filterTransformedAuthors)
-			// console.log(transformedAuthors)
-			const sortedTranformedResults = helpers.yearOfPublicationSorted(transformedResults)
-			console.log(sortedTranformedResults)
-			
-			const dataWrapper = {
-				"results": sortedTranformedResults
-			}
+			// console.log(filterTransformedAuthors)
 
-			app.get("/", (req, res) => res.json(dataWrapper))
+			const getGenderFromYear = helpers.getPublicationYears().map(year => {
+				
+				const resultsByYear = transformedResults.filter(result => result.publicationYear === year) 
+				const gendersAndNames =	resultsByYear
+					.map(result => helpers.getNameAndGender(result.author))
+					.filter(result => result.name && result.gender)
+				
+				const amountOfMen = gendersAndNames.filter(genderAndName => genderAndName.gender === 'Man').length
+				const amountOfWomen = gendersAndNames.filter(genderAndName => genderAndName.gender === 'Vrouw').length
+
+				return {
+					category: year.toString(),
+					values: [
+						{
+							gender: 'men',
+							value: amountOfMen,
+						},
+						{
+							gender: 'women',
+							value: amountOfWomen,
+						},
+					]
+				}
+			})
+
+			console.log(getGenderFromYear)
+
+			// const yearGenderPair = transformedResults.map(result => ({
+				
+			// }))
+			// console.log(transformedAuthors)
+			// const sortedTranformedResults = helpers.yearOfPublicationSorted(transformedResults)
+			// console.log(sortedTranformedResults)
+
+
+			
+			// const dataWrapper = {
+			// 	"results": {}
+			// }
+
+			app.get("/", (req, res) => res.json(getGenderFromYear))
 			app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
+			fs.writeFile("data.json", JSON.stringify(getGenderFromYear), (err) => err && console.error(err))
 		}
 	} catch (error) {
 		throw new Error(error)

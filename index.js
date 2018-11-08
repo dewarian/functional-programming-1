@@ -21,7 +21,7 @@ const search = async (q, facet) => {
 		librarian: true,
 		refine: true,
 		facet,
-		count: 1500,
+		count: 2000,
 		filter: (result) => {
 			const publicationYear = helpers.getPublicationYearFromResult(result)
 			const currentYear = new Date().getFullYear()
@@ -46,7 +46,6 @@ const search = async (q, facet) => {
 			const filterTransformedAuthors = transformedAuthors.filter(transformedAuthor => {
 				return transformedAuthor.name && transformedAuthor.gender
 			})
-			// console.log(filterTransformedAuthors)
 
 			const getGenderFromYear = helpers.getPublicationYears().map(year => {
 				
@@ -55,18 +54,18 @@ const search = async (q, facet) => {
 					.map(result => helpers.getNameAndGender(result.author))
 					.filter(result => result.name && result.gender)
 				
-				const amountOfMen = gendersAndNames.filter(genderAndName => genderAndName.gender === 'Man').length
-				const amountOfWomen = gendersAndNames.filter(genderAndName => genderAndName.gender === 'Vrouw').length
+				const amountOfMen = gendersAndNames.filter(genderAndName => genderAndName.gender === "Man").length
+				const amountOfWomen = gendersAndNames.filter(genderAndName => genderAndName.gender === "Vrouw").length
 
 				return {
 					category: year.toString(),
 					values: [
 						{
-							gender: 'men',
+							gender: "men",
 							value: amountOfMen,
 						},
 						{
-							gender: 'women',
+							gender: "women",
 							value: amountOfWomen,
 						},
 					]
@@ -74,19 +73,6 @@ const search = async (q, facet) => {
 			})
 
 			console.log(getGenderFromYear)
-
-			// const yearGenderPair = transformedResults.map(result => ({
-				
-			// }))
-			// console.log(transformedAuthors)
-			// const sortedTranformedResults = helpers.yearOfPublicationSorted(transformedResults)
-			// console.log(sortedTranformedResults)
-
-
-			
-			// const dataWrapper = {
-			// 	"results": {}
-			// }
 
 			app.get("/", (req, res) => res.json(getGenderFromYear))
 			app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))

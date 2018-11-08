@@ -40,18 +40,6 @@ const getPublicationYears = () => {
     return publicationYears
 }
 
-// const yearOfPublicationSorted = (books) => {
-//     const currentYear = new Date().getFullYear(books)    
-//     const yearsOfPublication = _range(currentYear - 5, currentYear + 1)
-
-//     return yearsOfPublication.map (year => ({
-//         category: year,
-//         values: [{gender: gender, value: count}] 
-//         ? books.filter(book => book.publicationYear === year)
-//         : null
-//     }))
-// }
-
 // Shout out naar Wouter 
 const getFilterdGender = {};
 
@@ -66,7 +54,7 @@ const getGenderFromName = (firstname) => {
 }
 
 const getNameAndGender = (author) => {
-    const authorFirstNameLastName = author && author.split(', ')
+    const authorFirstNameLastName = author && author.split(", ")
     let firstName = authorFirstNameLastName && authorFirstNameLastName.length && authorFirstNameLastName[1]
     const firstDot = firstName && firstName.indexOf(".")
     const hasDots = firstDot !== -1
@@ -77,15 +65,6 @@ const getNameAndGender = (author) => {
         gender: getGenderFromName(nameToUse),
     }
 }
-
-// Get gender from getNameAndGender
-// Koppel gender aan gender
-// Map over gender to get count(value)
-// Koppel count aan value
-// Nieuw JSON bestand waar alle data in opgeslagen wordt
-
-// loop over jaar
-// loop over een uniek jaartal om man en vrouw eruit te krijgen middels een loop again.
 
 const getTransformedFirstName = (hasDots, firstName, firstDot) => {
     const removeStartIndex = hasDots ? firstDot - 1 : undefined
@@ -105,7 +84,6 @@ const getTransformedResultFromResults = (results) => {
         })) 
         : []
 }
-
 
 module.exports = {
     getTransformedResultFromResults, 

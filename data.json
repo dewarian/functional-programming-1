@@ -65,7 +65,7 @@
     "category": "1995",
     "values": [{
         "gender": "men",
-        "value": 5
+        "value": 6
     }, {
         "gender": "women",
         "value": 1
@@ -209,37 +209,37 @@
     "category": "2011",
     "values": [{
         "gender": "men",
-        "value": 61
+        "value": 72
     }, {
         "gender": "women",
-        "value": 51
+        "value": 74
     }]
 }, {
     "category": "2012",
     "values": [{
         "gender": "men",
-        "value": 47
+        "value": 95
     }, {
         "gender": "women",
-        "value": 53
+        "value": 157
     }]
 }, {
     "category": "2013",
     "values": [{
         "gender": "men",
-        "value": 40
+        "value": 87
     }, {
         "gender": "women",
-        "value": 54
+        "value": 131
     }]
 }, {
     "category": "2014",
     "values": [{
         "gender": "men",
-        "value": 27
+        "value": 43
     }, {
         "gender": "women",
-        "value": 25
+        "value": 66
     }]
 }, {
     "category": "2015",

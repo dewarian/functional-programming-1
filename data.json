@@ -2,7 +2,7 @@
     "category": "1988",
     "values": [{
         "gender": "men",
-        "value": 2
+        "value": 3
     }, {
         "gender": "women",
         "value": 0
@@ -29,7 +29,7 @@
     "category": "1991",
     "values": [{
         "gender": "men",
-        "value": 0
+        "value": 1
     }, {
         "gender": "women",
         "value": 0
@@ -38,16 +38,16 @@
     "category": "1992",
     "values": [{
         "gender": "men",
-        "value": 0
+        "value": 1
     }, {
         "gender": "women",
-        "value": 0
+        "value": 1
     }]
 }, {
     "category": "1993",
     "values": [{
         "gender": "men",
-        "value": 1
+        "value": 2
     }, {
         "gender": "women",
         "value": 0
@@ -56,7 +56,7 @@
     "category": "1994",
     "values": [{
         "gender": "men",
-        "value": 0
+        "value": 1
     }, {
         "gender": "women",
         "value": 0
@@ -65,7 +65,7 @@
     "category": "1995",
     "values": [{
         "gender": "men",
-        "value": 2
+        "value": 5
     }, {
         "gender": "women",
         "value": 1
@@ -74,16 +74,16 @@
     "category": "1996",
     "values": [{
         "gender": "men",
-        "value": 1
+        "value": 5
     }, {
         "gender": "women",
-        "value": 0
+        "value": 2
     }]
 }, {
     "category": "1997",
     "values": [{
         "gender": "men",
-        "value": 2
+        "value": 6
     }, {
         "gender": "women",
         "value": 2
@@ -92,7 +92,7 @@
     "category": "1998",
     "values": [{
         "gender": "men",
-        "value": 1
+        "value": 3
     }, {
         "gender": "women",
         "value": 0
@@ -101,16 +101,16 @@
     "category": "1999",
     "values": [{
         "gender": "men",
-        "value": 1
+        "value": 3
     }, {
         "gender": "women",
-        "value": 1
+        "value": 4
     }]
 }, {
     "category": "2000",
     "values": [{
         "gender": "men",
-        "value": 0
+        "value": 4
     }, {
         "gender": "women",
         "value": 0
@@ -119,162 +119,162 @@
     "category": "2001",
     "values": [{
         "gender": "men",
-        "value": 1
+        "value": 4
     }, {
         "gender": "women",
-        "value": 1
+        "value": 2
     }]
 }, {
     "category": "2002",
     "values": [{
         "gender": "men",
-        "value": 2
+        "value": 9
     }, {
         "gender": "women",
-        "value": 1
+        "value": 2
     }]
 }, {
     "category": "2003",
     "values": [{
         "gender": "men",
-        "value": 3
-    }, {
-        "gender": "women",
-        "value": 1
-    }]
-}, {
-    "category": "2004",
-    "values": [{
-        "gender": "men",
-        "value": 3
-    }, {
-        "gender": "women",
-        "value": 2
-    }]
-}, {
-    "category": "2005",
-    "values": [{
-        "gender": "men",
-        "value": 3
+        "value": 10
     }, {
         "gender": "women",
         "value": 4
     }]
 }, {
+    "category": "2004",
+    "values": [{
+        "gender": "men",
+        "value": 11
+    }, {
+        "gender": "women",
+        "value": 6
+    }]
+}, {
+    "category": "2005",
+    "values": [{
+        "gender": "men",
+        "value": 9
+    }, {
+        "gender": "women",
+        "value": 18
+    }]
+}, {
     "category": "2006",
     "values": [{
         "gender": "men",
-        "value": 12
+        "value": 21
     }, {
         "gender": "women",
-        "value": 2
+        "value": 14
     }]
 }, {
     "category": "2007",
     "values": [{
         "gender": "men",
-        "value": 19
+        "value": 36
     }, {
         "gender": "women",
-        "value": 2
+        "value": 15
     }]
 }, {
     "category": "2008",
     "values": [{
         "gender": "men",
-        "value": 13
+        "value": 43
     }, {
         "gender": "women",
-        "value": 7
+        "value": 27
     }]
 }, {
     "category": "2009",
     "values": [{
         "gender": "men",
-        "value": 14
+        "value": 44
     }, {
         "gender": "women",
-        "value": 14
+        "value": 42
     }]
 }, {
     "category": "2010",
     "values": [{
         "gender": "men",
-        "value": 18
+        "value": 50
     }, {
         "gender": "women",
-        "value": 9
+        "value": 41
     }]
 }, {
     "category": "2011",
     "values": [{
         "gender": "men",
-        "value": 18
+        "value": 61
     }, {
         "gender": "women",
-        "value": 8
+        "value": 51
     }]
 }, {
     "category": "2012",
     "values": [{
         "gender": "men",
-        "value": 20
+        "value": 47
     }, {
         "gender": "women",
-        "value": 11
+        "value": 53
     }]
 }, {
     "category": "2013",
     "values": [{
         "gender": "men",
-        "value": 14
+        "value": 40
     }, {
         "gender": "women",
-        "value": 22
+        "value": 54
     }]
 }, {
     "category": "2014",
     "values": [{
         "gender": "men",
-        "value": 9
+        "value": 27
     }, {
         "gender": "women",
-        "value": 6
+        "value": 25
     }]
 }, {
     "category": "2015",
     "values": [{
         "gender": "men",
-        "value": 9
+        "value": 29
     }, {
         "gender": "women",
-        "value": 13
+        "value": 33
     }]
 }, {
     "category": "2016",
     "values": [{
         "gender": "men",
-        "value": 15
+        "value": 26
     }, {
         "gender": "women",
-        "value": 6
+        "value": 17
     }]
 }, {
     "category": "2017",
     "values": [{
         "gender": "men",
-        "value": 7
+        "value": 18
     }, {
         "gender": "women",
-        "value": 1
+        "value": 11
     }]
 }, {
     "category": "2018",
     "values": [{
         "gender": "men",
-        "value": 3
+        "value": 6
     }, {
         "gender": "women",
-        "value": 5
+        "value": 15
     }]
 }]

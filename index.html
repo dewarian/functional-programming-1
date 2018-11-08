@@ -5,18 +5,43 @@
 
 body {
   font: 14px Raleway;
+  color: #6b6b6b;
+  font-weight: 700;
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #2b2b2b;
+  stroke: #6b6b6b;
   shape-rendering: crispEdges;
 }
 
 .tick {
     font: 12px Raleway;
+    font-weight: 200;
+    stroke: #6b6b6b;
 }
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;
+    min-width: 80px;				
+    height: 18px;					
+    padding: 5px;				
+    font: 12px Raleway;
+    font-weight: 600;		
+    background: black;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;
+    color: white;			
+}
+
+div.html {
+    align-items: center;
+    margin: 5px;
+}
+
 
 /* .x.axis path {
   display: none;
@@ -51,6 +76,11 @@ var yAxis = d3.axisLeft(y)
 // var yAxis = d3.svg.axis()
     .scale(y)
     // .orient("left");
+
+// Define the div for the tooltip
+var div = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
 
 var color = d3.scaleOrdinal()
     .range(["#fc8d59", "#d7301f"]);
@@ -113,7 +143,13 @@ d3.json("./data.json").then(function(data) {
             d3.select(this)
                 .style("fill",
             d3.rgb(color(d.gender))
-                .darker(2));
+                .darker(2))
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .8);		
+            div.html((d.gender === "men" ? "Mannen" : "Vrouwen") + ": " + d.value)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");
         })
         .on("mouseout", function(d) {
             d3.select(this)

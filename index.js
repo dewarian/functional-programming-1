@@ -21,7 +21,7 @@ const search = async (q, facet) => {
 		librarian: true,
 		refine: true,
 		facet,
-		count: 500,
+		count: 1500,
 		filter: (result) => {
 			const publicationYear = helpers.getPublicationYearFromResult(result)
 			const currentYear = new Date().getFullYear()

@@ -1,3 +1,4 @@
+// Using existing data visualisation
 const margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom
@@ -25,7 +26,7 @@ const div = d3.select("body").append("div")
 const color = d3.scaleOrdinal()
     .range(["#3c67d3", "#a6b4dd"])
 
-const svg = d3.select('.data').append("svg")
+const svg = d3.select(".data").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -47,21 +48,21 @@ d3.json("./data.json").then(function(data) {
 
     svg.append("g")
         .attr("class", "y axis")
-        .style('opacity','0')
+        .style("opacity","0")
         .call(yAxis)
     .append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .style('font-weight','bold')
+        .style("font-weight","bold")
         .text("Aantal")
 
-    svg.select('.y')
+    svg.select(".y")
         .transition()
         .duration(500)
         .delay(1300)
-        .style('opacity','1')
+        .style("opacity","1")
 
     const slice = svg.selectAll(".slice")
         .data(data)

@@ -53,8 +53,10 @@ d3.json("./data.json").then(function(data) {
     const rateNames = data[0].values.map(d => (d.gender))
 
     x0.domain(categoriesNames)
+    // Start from 0 till bandwith (end of bar rect)
     x1.domain(rateNames)
         .range([0, x0.bandwidth()])
+    // End of y is the value of the highest bar chart
     y.domain([0, d3.max(data, (category) => { return d3.max(category.values, (d) => { return d.value }) })])
 
     svg.append("g")
@@ -66,6 +68,7 @@ d3.json("./data.json").then(function(data) {
         .attr("class", "y axis")
         .style("opacity","0")
         .call(yAxis)
+    // add text to group on y-as
     .append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
@@ -74,38 +77,46 @@ d3.json("./data.json").then(function(data) {
         .style("font-weight","bold")
         .text("Aantal")
 
+    // animation on y-as
     svg.select(".y")
         .transition()
         .duration(500)
         .delay(900)
         .style("opacity", 1)
 
+    
     const slice = svg.selectAll(".slice")
         .data(data)
         .enter().append("g")
         .attr("class", "g")
+        // distribute categories over the x-as
         .attr("transform",function(d) { return "translate(" + x0(d.category) + ",0)" })
 
     slice.selectAll("rect")
         .data(function(d) { return d.values; })
         .enter().append("rect")
+            // the width of a rect is bandwidth
             .attr("width", x1.bandwidth())
             .attr("x", function(d) { return x1(d.gender) })
             .style("fill", function(d) { return color(d.gender) })
             // Start animation from y(0)
             .attr("y", function(d) { return y(0) })
             .on("mouseover", function(d) {
+                // On hove make rect darker
                 d3.select(this)
                     .style("fill",
                 d3.rgb(color(d.gender))
                     .darker(1.4))
+                // Transition of tooltip
                 div.transition()		
                     .duration(200)		
-                    .style("opacity", .8)		
+                    .style("opacity", .8)
+                // Change names tooltip to dutch names
                 div.html((d.gender === "men" ? "Mannen" : "Vrouwen") + ": " + d.value)	
                     .style("left", (d3.event.pageX) + "px")		
                     .style("top", (d3.event.pageY - 28) + "px")
             })
+            // Another event
             .on("mouseout", function(d) {
                 d3.select(this)
                     .style("fill", 
@@ -128,24 +139,28 @@ d3.json("./data.json").then(function(data) {
         .data(data[0].values.map(d => (d.gender)).reverse())
     .enter().append("g")
         .attr("class", "legend")
+        // Postion of legend
         .attr("transform", (d, i) => { 
             return "translate(0," + i * 20 + ")" 
         })
-        .style("opacity","0")
-
+    
+    // Define shape of rect for legend
     legend.append("rect")
         .attr("x", width - 18)
         .attr("width", 18)
         .attr("height", 18)
+        // Use color function to connect the right color of gender
         .style("fill", (d => { return color(d) }))
-
+    
+    // Add text to legend
     legend.append("text")
         .attr("x", width - 24)
         .attr("y", 9)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
         .text(d => {return d === "men" ? "Mannen" : "Vrouwen" })
-
+    
+    // Animation legend
     legend.transition().duration(500).delay(function(d,i){ return 1300 + 100 * i }).style("opacity","1")
 
 })

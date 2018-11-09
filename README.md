@@ -77,7 +77,7 @@ These are some sketches I made beforehand. So browsing through Observable and bl
 
 ![](./images/viz1.jpg)
 
-![](.images/viz2.jpg)
+![](./images/viz2.jpg)
 
 ## Learning proces
 

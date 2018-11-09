@@ -4,11 +4,35 @@
 
 
 ## Table of Contents
+* [How to install](#how-to-install) 
 * [Visualization](#visualization) 
 * [Research](#research)
 * [Learning proces](#learning-proces)
 * [Credits](#credits)
 * [Resources](#resources)
+
+## How to install
+
+Before installing make sure you have installed the latest version of node.js
+Choose or make a new directory.
+Load the template into your directory.
+```bash
+git clone https://github.com/chelseadoeleman/functional-programming.git
+```
+
+Make sure you have the latest version of npm.
+Install the dependencies in [package.json](package.json)
+```bash
+npm install
+```
+
+**Warning, read before executing**
+Before starting the server there need to be some changes made in node_modules. This is ofcourse bad practice, but because of a bug needs to be done none the less. In `oba-api` dependency that is used in the `node-oba-api-wrapper` the url needs be changed: `const baseUrl = 'http://zoeken.oba.nl/api/v1/';` to this. This can be done in `index.js` in `oba-api`. 
+
+Start the server 
+```bash
+npm start
+```
 
 
 ## Visualization
@@ -114,7 +138,7 @@ These are some sketches I made beforehand. So browsing through Observable and bl
 ![](./images/viz2.jpg)
 
 
-In the end it was suprising to see that there weren't that many female publishers before 2000, wether this is because of the other Api used to connect a gender to an author name remains possible. Especially because it could not get author's that used their initials and last name. Like Harry Potter and the Goblet of fire, was released in 2000, but the Api couldn't connect J.K rowling as an female... So there is definitely room for improvement there, but for now it works. And still shows some interesting results. 
+In the end it was suprising to see that there weren't that many female publishers before 2000, wether this is because of the other Api used to connect a gender to an author name remains possible. Especially because it could not get authors that used their initials and last name. For example Harry Potter and the Goblet of fire, was released in 2000, but the Api couldn't connect J.K rowling to the gender female... So there is definitely room for improvement there, but for now it works. And still shows some interesting results. 
 Where I thought female authors wouldn't have exceeded the male authors I was wrong, because as of 2012 there were more books published by female authors than male authors. Still the most suprising results were for me the books published before 2000, because apparently there weren't that many, wether published by male or female authors.
 
 ## Learning proces
@@ -151,3 +175,6 @@ These are the people that helped me the most while programming. Either by asking
 * MDN web tools
 * [Grouped bar chart](https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad)
 * [Tooltips](http://bl.ocks.org/d3noob/a22c42db65eb00d4e369)
+
+## License
+This repository is licensed as [MIT](license) by [Chelsea Doeleman](https://github.com/chelseadoeleman), 2018

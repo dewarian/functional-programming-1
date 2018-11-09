@@ -66,16 +66,17 @@ d3.json("./data.json").then(function(data) {
 
     svg.append("g")
         .attr("class", "y axis")
-        .style("opacity","0")
+        .style("opacity", 1)
         .call(yAxis)
-    // add text to group on y-as
-    .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", ".71em")
-        .style("text-anchor", "end")
-        .style("font-weight","bold")
-        .text("Aantal")
+        // add text to group on y-as
+        .call(g => g.append("text")
+           .attr("transform", "rotate(-90)")
+           .attr("y", 6)
+           .attr("dy", "1em")
+           .attr("fill", "#000000")
+           .style("text-anchor", "end")
+           .style("font-weight","bold")
+           .text("Aantal"))
 
     // animation on y-as
     svg.select(".y")

@@ -10,7 +10,7 @@
 * [Learning proces](#learning-proces)
 * [Credits](#credits)
 * [Resources](#resources)
-* [Tools](#tools)
+* [Packages](#packages)
 * [License](#license)
 
 ## How to install
@@ -178,10 +178,10 @@ These are the people that helped me the most while programming. Either by asking
 * [Grouped bar chart](https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad)
 * [Tooltips](http://bl.ocks.org/d3noob/a22c42db65eb00d4e369)
 
-## Tools
+## Packages 
 
 * [lodash.range]()
-To get a range of publication years, where you define a start and endpoint. As an alternative you could write a loop, but this isn't functional ofcourse! 🙃
+To get a range of publication years, where you define a start and endpoint, as an array. Alternatively you could write a loop, but this isn't functional ofcourse! 🙃
 
 
 ## License

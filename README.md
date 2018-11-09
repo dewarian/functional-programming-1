@@ -1,185 +1,115 @@
-# Oba
+# Functional Programming
+## Partner: Oba 
+**In this project we got to build a research case with data from the Oba. By talking to an Api and in the end making a data visualization with D3. All this while programming as functional as possible. Bye spaghetti code!**
+
+
+## Table of Contents
+* [Visualization](#visualization) 
+* [Research](#research)
+* [Learning proces](#learning-proces)
+* [Credits](#credits)
+* [Resources](#resources)
+
+
+## Visualization
+
+![](./images/data.png)
+
+End result is hosted on [github pages](https://chelseadoeleman.github.io/functional-programming/)
 
 
 ## Research
 
+### Oriëntation
 
-### Orientatie
+By talking to the Api I have looked at the different variables in the data and what could be interesting starting points. Unfortunately, the Api was quite complicated, but thanks to [Daniël van de Velde's ReadMe](https://github.com/DanielvandeVelde/functional-programming/blob/master/README.md) I was able to get a good overview of the data and then to draw up research questions.
 
-Door tegen de Api aan te praten heb ik bekeken welke verschillende variabelen zich in de data bevinden en wat interessante uitgangspunten kunnen zijn. Helaas was de Api best wel onoverzichtelijk, maar dankzij de [readme van Daniël van de Velde](https://github.com/DanielvandeVelde/functional-programming/blob/master/README.md) heb ik uiteindelijk alsnog een goed overzicht kunnen krijgen van de data en vervolgens onderzoeksvragen kunnen opstellen.
+### Research Questions
 
-### Onderzoeksvragen
+These are some questions I think are interesting to look further into, while looking at the dataset of the Oba.
 
-* Hoe is de verhouding qua publicatie tussen mannelijke en vrouwelijke auteurs veranderd, door de jaren heen?
-    * Zit er een verschil tussen uitgevers in de bibliotheek, die meer werk publiceren van mannelijke auteurs dan vrouwelijke?
-    * Zijn er uitgevers in de bibliotheek, die meer werk zijn gaan publiceren van vrouwelijke auteurs en uitgevers die nog steeds meer mannelijke auteurs vertegenwoordigen door de jaren heen?
-    * Heeft de oba meer vrouwelijke, dan mannelijke auteurs in hun catalogus en is dit in verband met het aantal uitgevers die zich binnen de Oba bevinden?
-    * In de periode dat de feministsche golf op gang kwam, zijn er toen meer boeken uitgekomen, die geschreven zijn door vrouwen of meer boeken over het feminisme zelf?
+* How has the relationship between male and female authors in terms of publication changed over the years?
+    * Is there a difference between publishers in the library who publish more work by male authors than female authors?
+    * Have there been publishers in the library who have started to publish more work by female authors and publishers who are still representing more male authors through the years?
+    * Does the Oba have more female than male authors in their catalogue and is this because of the number of publishers in the Oba?
+    * Back in time when the feminist wave came into being, were there more books published by women or more books about feminism itself?
 
-* Zijn er in bepaalde jaren meer boeken uitgegeven door specifieke uitgevers en hoe is dit gerelateerd aan gebeurtenissen in die periode?
-    * Geven uitgevers meer boeken uit van een bepaald genre en is dit gerelateerd aan bepaalde periodes?
+* Are there more books published by specific publishers in certain years and how is this related to events in that period?
+    * Do publishers publish more books of a certain genre and is this related to certain events?
 
-* Zijn er meer boeken of tijdschriften over technologie uitgegeven in de afgelopen vijf jaar en worden er meer coverimages gebruikt?
-    * Worden er steeds meer coverimages gebruikt door de jaren heen en is er een verband met de uitgevers?
+* Have more technology books or magazines been published in the last five years and are they using more cover images for those books?
+    * Are more and more cover images used over the years and is there a connection between them and the publishers?
 
-* Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden is er een verband met de uitgevers?
+* How many books are translated against books that are kept in the original language, is there a connection to the publishers?
 
-* Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties en is dit in verband met het jaar van uitgave?
-    * Zijn deze boeken ook gesorteerd op geslacht?
-
-
-
-Ik wil mij graag focussen op het verschil bij uitgevers tussen mannelijke en vrouwelijke auteurs en hoe dit door de jaren heen is veranderd. Mijn verwachtingen zijn dat er nog steeds meer mannelijk auteurs worden gerepresenteerd door uitgevers, maar dat er wel een stijgende lijn is te vinden bij vrouwelijke auteurs. 
-
-Daarnaast lijkt mij ook interessant om uit te zoeken welke uitgevers, meer young-adult boeken uitbrengen en of dit over het algemeen meer vrouwelijke auteurs zijn dan mannelijke. 
+* Are books by a particular author more often in a specific location than other locations and is this related to the year of publication?
+    * Are these books also sorted by gender?
 
 
-**Hoofdvraag**
 
-Hoe ziet de verdeling tussen mannelijke en vrouwelijke auteurs eruit in vergelijking met verschillende uitgevers, door de jaren heen? 
+I would like to focus on the difference between male and female authors in publishers and how this has changed over the years. My expectations are that more male authors are still represented by publishers, but that there is an ascending trend among female authors. 
+
+If there is more time after realising my data in a graph, in addition I also think it would be interesting to find out which publishers publish more young-adult books and whether this genre is generally written more by female authors than by male authors. But isn't relevant for now, maybe somewhere in the future.
 
 
-**Hypothese**
+**Main question**
 
-De afgelopen vijf zijn het aantal vrouwelijke auteurs sterk toegenomen onder verschillende uitgevers, hoewel het aantal nog steeds niet mannelijke auteurs overtreft.
+What will the difference between male and female authors look like over the past few years? 
 
+**Hypothesis**
+
+Over the past thirty years, the number of female authors has increased significantly among publications, although the number still does not exceed the number of male authors.
 
 ### Data
 
-Voor dit onderzoek heb ik de volgende data nodig uit de Api:
-    * Alleen alle data over boeken in de bibliotheek
-    * De verschillende auteurs
-    * De verschillende uitgevers
-    * De boeken van de afgelopen vijf jaar. Dus het publicatiejaar.
+For this research I need the following data from the Api:
+    * Only the data about books in the library
+    * The different authors
+    * The different publishers
+    * The books over the past thirty years and the year of publication.
 
-Andere bronnen:
-    * Overzicht van namen van alle vrouwelijke en mannelijke auteurs, waarbij het geslacht ook bekend is.
+Additional sources:
+    * Overview of names of all female and male authors, where the gender is also known.
 
+### Possible visualizations
 
-### Mogelijke visualisaties
+These are some sketches I made beforehand. So browsing through Observable and bl.ocks would be easier, because I would know what to look for. It also gave me an overview of what I might be able to realise in the amount of time that I had and with my Javascript skills. The first sketch required some merging of two different graphs, which would make reading the data harder than it should be and also more difficult to realise with D3. Which is a complex program in itself.
 
+![](./images/viz1.jpg)
 
+![](.images/viz2.jpg)
 
-### Bronnen
+## Learning proces
 
-* Oba Api
+I made some major steps throughout this project. 
+First of all working with an Api was something I had never done before, so setting it up was enlightning and frustrating at the same time. I learned how to work with different parameters in the Api while using facets, etc. and to gather data from the Api neatly with Promises. Promises where always something I could not wrap my head around, until now. I finally get the gist of it. 
 
-### Credits
+Then came along all the functions, because it is still functional programming. In the end the best way for me to code, was to directly write stept by step, what needed to happen to realise that certain part. Then to write it like spaghetti code and in the end dividing it into different functions, which I then wrote in [helpers](./helpers.js). From there I could call the different functions that were defined in helpers in my [index.js](./index.js) so my index.js wouldn't blow up with all the different functions.
 
-* Folkert-Jan
-* Daniël van de Velde
-* Wouter 
-* Maikel
+Another thing I learned was to load data dynamically in a new JSON file, but moreover just creating new Objects with data from the Api. So that the data could be more clearly arranged and I could get a better overview. I found this the most difficult part of functional programming, but in the end I managed but with a lot of help. 
+I really liked the different functions that made it possible to do all kind of things with an array, like map and filter. I still find it quite hard though to clean up the data and definitely want to keep practicing this!
+
+Because I was so engrossed in the data and had a lot of difficulties with it, I didn't allow enough time to work and experiment with D3. It looks so cool, so I definitely want to dive deeper into D3! Also because it is quite complex en the possibilities are almost endless! There is still a lot to learn and I got the feeling that I am not at the right level now, where I should have been by the end of this course. I find this very unfortunate and a real pity.
+
+A complete log of my learning proces can be found [here!](./proceslog.md)
+
+## Credits
+
+These are the people that helped me the most while programming. Either by asking questions and/or looking at their repository's.
+
+* [Folkert-Jan](https://github.com/FJvdPol) & Dennis
+* [Daniël van de Velde](https://github.com/DanielvandeVelde)
+* [Wouter](https://github.com/maanlamp)
+* [Maikel](https://github.com/Maikxx)
 * Tim
+* [Jessie](https://github.com/jessiemasonx)
+* [Linda](https://github.com/LindadeHaan)
 
 
+## Resources
 
-## Proces 
-
-
-### Week 1
-
-
-#### Day 1 | 29 October 2018
-
-Today started off with another kick-off by Titus and Laurens. Then Mark gave us a short lecture about Oba and their house and technical rules. Followed by a lesson about higherfunctions, arrays and strings, which was very useful. Especially higherfunctions, because it allows you to write more readable code and a lot shorter. 
-
-Then we tried to talk to the Oba API with an package from [Rijk van Zanten](https://github.com/rijkvanzanten/node-oba-api) on github, however it did not go as planned. Eventually we decided to put his code directly in to the [index.js](./index.js) file, because otherwise it did not work properly. I put the secret and public key into a .env file, because it cannot be published on github. .env is obviously stored in .gitignore. By importing .env into index.js you could access both keys. Right now I can only use different search words, which in turn will return matching results. 
-
-
-#### Day 2 | 30 October 2018
-
-Today I worked on accessing more data than just using the search endpoint in the API, like details and availability. There are more endpoints, but don't think they could provide me with more useful data for my research questions. Writing the functions to get different endpoint I spent the majority of my time on. Especially because I could no longer write spaghetti code, but had to make my code more functional. Right now it is still a bit spaghetti and I know I could write it shorter, but I also had to come up with some research questions before the end of the day. 
-
-So after I could access a lot more of the data than yesterday, I resort to spitting through the data. The data that came back with the details endpoint was the most useful for me. 
-I've come up with the following questions:
-
-* Zit er een publicatie verschil tussen mannelijke en vrouwelijke auteurs, door de jaren heen?
-
-* Hebben bepaalde uitgevers in specifieke jaren meer uitgegeven, dan in andere jaren?
-
-* Zijn er meer boeken of tijdschriften over technologie uitgegeven in de afgelopen vijf jaar?
-
-* Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden?
-
-* Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties?
-
-
-#### Day 3 | 31 October 2018
-
-Today we discussed my first question in class and as a result came up with new questions! Then we also got the chance to discuss our questions with fellow classmates which helped with to look at things from another perspective. Obviously I also realized I formed a lot of 'yes' or 'no' questions, so I had to rephrase those, to make them sound better, but also to specify those question, as they are now quite abstract. 
-
-Then I did some more research in the data to find more deeper aspects to those question and to refine them. This part I really struggled with, because there are a lot of different variables in the dataset. Thankfully some classmates wrote some code, which made it a lot easier to browse through the data and another classmate wrote every meaning to the variables in the data. This made it all a lot clearer for me. 
-
-Afterwards I tried to implement my code through theirs, but I'm still struggling on that part. Moreover because I'm not exactly sure if I should implement my code through theirs... This is also a side effect, because I understand a large part of their code, but not all. Then I tried to search with more search words, unfortunately it broke... It is possible to make this work, so it's something I will keep working on until it works. 
-
-Around noon Laurens en Titus gave us lectures about how to get certain parts out of the API and how you can use promises to access information at the same time out of different endpoints. 
-
-**Research questions**
-
-* Hoe is de verhouding qua publicatie tussen mannelijke en vrouwelijke auteurs veranderd, door de jaren heen?
-    * Zit er een verschil tussen uitgevers in de bibliotheek, die meer werk publiceren van mannelijke auteurs dan vrouwelijke?
-    * Zijn er uitgevers in de bibliotheek, die meer werk zijn gaan publiceren van vrouwelijke auteurs en uitgevers die nog steeds meer mannelijke auteurs vertegenwoordigen door de jaren heen?
-    * Heeft de oba meer vrouwelijke, dan mannelijke auteurs in hun catalogus en is dit in verband met het aantal uitgevers die zich binnen de Oba bevinden?
-    * In de periode dat de feministsche golf op gang kwam, zijn er toen meer boeken uitgekomen, die geschreven zijn door vrouwen of meer boeken over het feminisme zelf?
-
-* Zijn er in bepaalde jaren meer boeken uitgegeven door specifieke uitgevers en hoe is dit gerelateerd aan gebeurtenissen in die periode?
-    * Geven uitgevers meer boeken uit van een bepaald genre en is dit gerelateerd aan bepaalde periodes?
-
-* Zijn er meer boeken of tijdschriften over technologie uitgegeven in de afgelopen vijf jaar en worden er meer coverimages gebruikt?
-    * Worden er steeds meer coverimages gebruikt door de jaren heen en is er een verband met de uitgevers?
-
-* Hoeveel boeken worden er vertaald tegenover boeken, die wel in de oorspronkelijke taal gehouden worden is er een verband met de uitgevers?
-
-* Bevinden boeken van een specifieke auteur zich vaker op een bepaalde locatie, dan andere locaties en is dit in verband met het jaar van uitgave?
-    * Zijn deze boeken ook gesorteerd op geslacht?
-
-
-#### Day 4 | 1 November 2018
-
-**Hypotheses**
-Uitgevers publiceren vaker boeken van mannelijke auteurs, dan vrouwelijke auteurs.
-
-**Roadmap**
-
-1. Find out how facets work.
-2. Sort through the data to find if all variables are accessable.
-    * Make sure to only get all the books in the Api.
-    * All the books need to be in dutch.
-    * Find all the authors.
-    * Find the different publishers.
-    * Sort through all the publication years of these authors.
-    * Use another Api with the most popular male and female firstnames.
-3. Try to use more keySearch words, to make the results more clearer. 
-4. Store results in a New Object
-
-On this day I completed step one and two, but didn't get to step three and four. I spend the day mainly trying to get all the data from the api, that I needed to answer my research question. Tim did explain to me how I should go about completing step three and four. I understand the logic of it and know what needs to be done, all that remains to be done is writing the code, which I reckon is one of my weaknesses. 
-
-
-#### Day 5 | 2 November 2018
-
-On this day I continued working on step three and four, with help from Maikel, I finally managed to complete those tasks around midday. Then we got a lecture about Observable and D3, which was awesome! I can't wait to work with D3, because it looks so cool! Observable is also mighty handy, because you have these examples which can be edited and it's amazing! The remainder of the day I helped Jessie and Linda with their code to make sure they would only get their needed results out of the Api and browsed through Obeservable. 
-
-
-### Week 2
-
-
-#### Day 6 | 5 November 2018
-
-Today we got another lecture by Rejo of Bits of Freedom, the talk was quite long, but very interesting. Afterwards I gained a lot of new insights into the privacy problem, because it will continue to be a problem when do not decide to choose another path. Afterwards together with Jessie and some help from Daniël I tried to get more than 20 results from the Api. The wrapper that returned more than 20 results was written by Wouter and very understandable code! Also, it worked! I also made some sketches about what I want my visualization to look like, but in the end I had hard time coming up with something creative. The only thing I thought would be nice to create with D3, will probably be a step too far, at the moment. But who knows, maybe I will create it, when I aquire the right skills. For now I just stayed with an old trusty line chart.
-
-#### Day 7 | 6 November 2018
-
-I started off with trying to sort the data and trying to get data of a certain timespan out of the Api. Because my research is going to be based on the last five years. Around midday I got all the data back, then together with Maikel we tried to change our datastructure so it could be easily implemented in D3. This was easier said than done obviously. We knew what had to happen, now only to realise it... 
-
-Afterwards the Api didn't work anymore, not that it actually broke, but my code didn't go together with the Api anymore. Maybe because of some changes they made in the Api and decided to update it? However blind coding was kinda out of the question, because then I really wouldn't have a clue as to what went wrong... Seemend like wasted time to me, so I decided to look up some D3 tutorials. By browsing through Observable and toying with the code and watching Youtube video's. 
-
-#### Day 8 | 7 November 2018
-
-
-#### Day 9 | 8 November 2018
-
-
-#### Day 10 | 9 November 2018
-
-Assessment day
+* [Oba Api](https://zoeken.oba.nl/api/v1/)
+* Stackoverflow
+* MDN web tools
+* [Grouped bar chart](https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad)
+* [Tooltips](http://bl.ocks.org/d3noob/a22c42db65eb00d4e369)

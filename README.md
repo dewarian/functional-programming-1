@@ -22,10 +22,11 @@ End result is hosted on [github pages](https://chelseadoeleman.github.io/functio
 
 ### Oriëntation
 
-By talking to the Api I have looked at the different variables in the data and what could be interesting starting points. Unfortunately, the Api was quite complicated, but thanks to [Daniël van de Velde's ReadMe](https://github.com/DanielvandeVelde/functional-programming/blob/master/README.md) I was able to get a good overview of the data and then to draw up research questions.
+By talking to the Api I have looked at the different variables in the data and what could be interesting starting points. Unfortunately, the Api was quite complicated, but thanks to [Daniël van de Velde's ReadMe](https://github.com/DanielvandeVelde/functional-programming/blob/master/README.md) I was able to get a good overview of the data and then to draw up research questions. By using [Rijk's](https://github.com/rijkvanzanten/node-oba-api) package for node to use the Api, it was quite easily possible to return data from the Api.
 
 ### Research Questions
 
+After loading some data from the Api, I used an JSON viewer extensions. This made it possible to look at the data with the browser instead of the commandline.
 These are some questions I think are interesting to look further into, while looking at the dataset of the Oba.
 
 * How has the relationship between male and female authors in terms of publication changed over the years?
@@ -71,6 +72,30 @@ For this research I need the following data from the Api:
 Additional sources:
     * Overview of names of all female and male authors, where the gender is also known.
 
+
+Thanks to [Wouter](https://github.com/maanlamp/frontend-applications) I could use another Api, that returned some popular dutch names with the belonging gender. This made it possible to loop over my results and get the author and adding the belonging gender to the author. The data was formatted as JSON, so this made it easy for me to use. 
+
+I managed to get my data in the desired format, so that I could use it in my visualisation, which I build with D3.
+It looks something like this
+
+```
+{ category: '2012',
+    values:
+     [ { gender: 'men', value: 5 }, { gender: 'women', value: 2 } ] },
+  { category: '2013',
+    values:
+     [ { gender: 'men', value: 2 }, { gender: 'women', value: 2 } ] },
+  { category: '2014',
+    values:
+     [ { gender: 'men', value: 1 }, { gender: 'women', value: 1 } ] },
+  { category: '2015',
+    values:
+     [ { gender: 'men', value: 1 }, { gender: 'women', value: 1 } ] },
+
+```
+
+With [Wouter's wrapper]() it was possible to return more than 20 results in the data, which in turn could be stored in [data.json](./data.json)
+
 ### Possible visualizations
 
 These are some sketches I made beforehand. So browsing through Observable and bl.ocks would be easier, because I would know what to look for. It also gave me an overview of what I might be able to realise in the amount of time that I had and with my Javascript skills. The first sketch required some merging of two different graphs, which would make reading the data harder than it should be and also more difficult to realise with D3. Which is a complex program in itself.
@@ -84,7 +109,7 @@ These are some sketches I made beforehand. So browsing through Observable and bl
 I made some major steps throughout this project. 
 First of all working with an Api was something I had never done before, so setting it up was enlightning and frustrating at the same time. I learned how to work with different parameters in the Api while using facets, etc. and to gather data from the Api neatly with Promises. Promises where always something I could not wrap my head around, until now. I finally get the gist of it. 
 
-Then came along all the functions, because it is still functional programming. In the end the best way for me to code, was to directly write stept by step, what needed to happen to realise that certain part. Then to write it like spaghetti code and in the end dividing it into different functions, which I then wrote in [helpers](./helpers.js). From there I could call the different functions that were defined in helpers in my [index.js](./index.js) so my index.js wouldn't blow up with all the different functions.
+Then came along all the functions, because it is still functional programming. In the end the best way for me to code, was to directly write stept by step, what needed to happen to realise that certain part. Then to write it like spaghetti code and in the end dividing it into different functions, which I then wrote in [helpers.js](./helpers.js). From there I could call the different functions that were defined in helpers in my [index.js](./index.js) so my index.js wouldn't blow up with all the different functions.
 
 Another thing I learned was to load data dynamically in a new JSON file, but moreover just creating new Objects with data from the Api. So that the data could be more clearly arranged and I could get a better overview. I found this the most difficult part of functional programming, but in the end I managed but with a lot of help. 
 I really liked the different functions that made it possible to do all kind of things with an array, like map and filter. I still find it quite hard though to clean up the data and definitely want to keep practicing this!

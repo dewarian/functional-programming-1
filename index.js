@@ -85,6 +85,8 @@ const search = async (q, facet) => {
 			})
 
 			console.log(getGenderFromYear)
+			console.log(filterTransformedAuthors)
+			console.log(transformedResults)
 
 			// Get results in localhost on port 3000 
 			app.get("/", (req, res) => res.json(getGenderFromYear))

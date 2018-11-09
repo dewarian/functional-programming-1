@@ -49,7 +49,7 @@ const getFilterdGender = {};
 // Check if the name is male of female or maybe can't even be identified
 const getGenderFromName = (firstname) => {
 	if (Object.keys(getFilterdGender ).length <= 0) {
-		Object.assign(getFilterdGender , JSON.parse(fs.readFileSync(__dirname + "/../names.json", "utf8")));
+		Object.assign(getFilterdGender , JSON.parse(fs.readFileSync(__dirname + "/../data/names.json", "utf8")));
 	}
 	const man = getFilterdGender .mannen.find(name => name === firstname);
     const vrouw = getFilterdGender .vrouwen.find(name => name === firstname);

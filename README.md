@@ -7,7 +7,7 @@
 * [How to install](#how-to-install) 
 * [Visualization](#visualization) 
 * [Research](#research)
-* [Learning proces](#learning-proces)
+* [Learning process](#learning-process)
 * [Credits](#credits)
 * [Resources](#resources)
 * [Packages](#packages)
@@ -143,7 +143,7 @@ These are some sketches I made beforehand. So browsing through Observable and bl
 In the end it was suprising to see that there weren't that many female publishers before 2000, wether this is because of the other Api used to connect a gender to an author name remains possible. Especially because it could not get authors that used their initials and last name. For example Harry Potter and the Goblet of fire, was released in 2000, but the Api couldn't connect J.K rowling to the gender female... So there is definitely room for improvement there, but for now it works. And still shows some interesting results. 
 Where I thought female authors wouldn't have exceeded the male authors I was wrong, because as of 2012 there were more books published by female authors than male authors. Still the most suprising results were for me the books published before 2000, because apparently there weren't that many, wether published by male or female authors.
 
-## Learning proces
+## Learning process
 
 I made some major steps throughout this project. 
 First of all working with an Api was something I had never done before, so setting it up was enlightning and frustrating at the same time. I learned how to work with different parameters in the Api while using facets, etc. and to gather data from the Api neatly with Promises. Promises where always something I could not wrap my head around, until now. I finally get the gist of it. The hardest part for me was returning more than 20 results.
@@ -155,7 +155,7 @@ I really liked the different functions that made it possible to do all kind of t
 
 Because I was so engrossed in the data and had a lot of difficulties with it, I didn't allow enough time to work and experiment with D3. It looks so cool, so I definitely want to dive deeper into D3! Also because it is quite complex en the possibilities are almost endless! There is still a lot to learn and I got the feeling that I am not at the right level now, where I should have been by the end of this course. I find this very unfortunate and a real pity.
 
-A complete log of my learning proces can be found [here!](./proceslog.md)
+A complete log of my learning process can be found [here!](./docs/processlog.md)
 
 ## Credits
 

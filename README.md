@@ -1,6 +1,6 @@
 # Functional Programming
 ## Partner: Oba 
-**In this project we got to build a research case with data from the Oba. By talking to an Api and in the end making a data visualization with D3. All this while programming as functional as possible. Bye spaghetti code! 🤓**
+**In this project we got to build a research case with data from the Oba. By talking to an Api and in the end making a data visualization with D3. All this while programming as functional as possible. Bye bye spaghetti code! 🤓**
 
 
 ## Table of Contents

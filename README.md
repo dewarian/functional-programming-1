@@ -28,8 +28,9 @@ Install the dependencies in [package.json](package.json)
 npm install
 ```
 
-**Warning, read before executing**
-Before starting the server there need to be some changes made in node_modules. This is ofcourse bad practice, but because of a bug needs to be done none the less. In `oba-api` dependency that is used in the `node-oba-api-wrapper` the url needs be changed: `const baseUrl = 'http://zoeken.oba.nl/api/v1/';` to this. This can be done in `index.js` in `oba-api`. 
+### Warning, read before executing
+
+**Before starting the server there need to be some changes made in node_modules. This is ofcourse bad practice, but because of a bug needs to be done none the less. In `oba-api` dependency that is used in the `node-oba-api-wrapper` the url needs be changed: `const baseUrl = 'http://zoeken.oba.nl/api/v1/';` to this. This can be done in `index.js` in `oba-api`.**
 
 Start the server 
 ```bash

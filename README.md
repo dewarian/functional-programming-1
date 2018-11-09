@@ -26,7 +26,7 @@ By talking to the Api I have looked at the different variables in the data and w
 
 ### Research Questions
 
-After loading some data from the Api, I used an JSON viewer extensions. This made it possible to look at the data with the browser instead of the commandline.
+After loading some data from the Api, I used an JSON viewer extension. This made it possible to look at the data through the browser instead of using the terminal.
 These are some questions I think are interesting to look further into, while looking at the dataset of the Oba.
 
 * How has the relationship between male and female authors in terms of publication changed over the years?
@@ -50,7 +50,7 @@ These are some questions I think are interesting to look further into, while loo
 
 I would like to focus on the difference between male and female authors in publishers and how this has changed over the years. My expectations are that more male authors are still represented by publishers, but that there is an ascending trend among female authors. 
 
-If there is more time after realising my data in a graph, in addition I also think it would be interesting to find out which publishers publish more young-adult books and whether this genre is generally written more by female authors than by male authors. But isn't relevant for now, maybe somewhere in the future.
+If there is more time after realising my data in a graph, in addition I also think it would be interesting to find out which publishers publish more young-adult books and whether this genre is generally written more by female authors than by male authors. But this isn't relevant for now, maybe somewhere in the future.
 
 
 **Main question**
@@ -72,6 +72,15 @@ For this research I need the following data from the Api:
 Additional sources:
     * Overview of names of all female and male authors, where the gender is also known.
 
+This is what my [transformedResults](./index.js) looks like:
+```
+[ { author: 'Wieringa, Tommy',
+    publisher: 'De Bezige Bij',
+    publicationYear: 2014,
+    language: 'dut' 
+} ]
+```
+
 
 Thanks to [Wouter](https://github.com/maanlamp/frontend-applications) I could use another Api, that returned some popular dutch names with the belonging gender. This made it possible to loop over my results and get the author and adding the belonging gender to the author. The data was formatted as JSON, so this made it easy for me to use. 
 
@@ -81,16 +90,16 @@ It looks something like this
 ```
 { category: '2012',
     values:
-     [ { gender: 'men', value: 5 }, { gender: 'women', value: 2 } ] },
-  { category: '2013',
+    [ { gender: 'men', value: 5 }, { gender: 'women', value: 2 } ] },
+{ category: '2013',
     values:
-     [ { gender: 'men', value: 2 }, { gender: 'women', value: 2 } ] },
-  { category: '2014',
+    [ { gender: 'men', value: 2 }, { gender: 'women', value: 2 } ] },
+{ category: '2014',
     values:
-     [ { gender: 'men', value: 1 }, { gender: 'women', value: 1 } ] },
-  { category: '2015',
+    [ { gender: 'men', value: 1 }, { gender: 'women', value: 1 } ] },
+{ category: '2015',
     values:
-     [ { gender: 'men', value: 1 }, { gender: 'women', value: 1 } ] },
+    [ { gender: 'men', value: 1 }, { gender: 'women', value: 1 } ] },
 
 ```
 
@@ -104,10 +113,14 @@ These are some sketches I made beforehand. So browsing through Observable and bl
 
 ![](./images/viz2.jpg)
 
+
+In the end it was suprising to see that there weren't that many female publishers before 2000, wether this is because of the other Api used to connect a gender to an author name remains possible. Especially because it could not get author's that used their initials and last name. Like Harry Potter and the Goblet of fire, was released in 2000, but the Api couldn't connect J.K rowling as an female... So there is definitely room for improvement there, but for now it works. And still shows some interesting results. 
+Where I thought female authors wouldn't have exceeded the male authors I was wrong, because as of 2012 there were more books published by female authors than male authors. Still the most suprising results were for me the books published before 2000, because apparently there weren't that many, wether published by male or female authors.
+
 ## Learning proces
 
 I made some major steps throughout this project. 
-First of all working with an Api was something I had never done before, so setting it up was enlightning and frustrating at the same time. I learned how to work with different parameters in the Api while using facets, etc. and to gather data from the Api neatly with Promises. Promises where always something I could not wrap my head around, until now. I finally get the gist of it. 
+First of all working with an Api was something I had never done before, so setting it up was enlightning and frustrating at the same time. I learned how to work with different parameters in the Api while using facets, etc. and to gather data from the Api neatly with Promises. Promises where always something I could not wrap my head around, until now. I finally get the gist of it. The hardest part for me was returning more than 20 results.
 
 Then came along all the functions, because it is still functional programming. In the end the best way for me to code, was to directly write stept by step, what needed to happen to realise that certain part. Then to write it like spaghetti code and in the end dividing it into different functions, which I then wrote in [helpers.js](./helpers.js). From there I could call the different functions that were defined in helpers in my [index.js](./index.js) so my index.js wouldn't blow up with all the different functions.
 

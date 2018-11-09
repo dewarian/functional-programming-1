@@ -1,6 +1,6 @@
 # Functional Programming
 ## Partner: Oba 
-**In this project we got to build a research case with data from the Oba. By talking to an Api and in the end making a data visualization with D3. All this while programming as functional as possible. Bye spaghetti code!**
+**In this project we got to build a research case with data from the Oba. By talking to an Api and in the end making a data visualization with D3. All this while programming as functional as possible. Bye spaghetti code! 🤓**
 
 
 ## Table of Contents
@@ -10,6 +10,8 @@
 * [Learning proces](#learning-proces)
 * [Credits](#credits)
 * [Resources](#resources)
+* [Tools](#tools)
+* [License](#license)
 
 ## How to install
 
@@ -37,7 +39,7 @@ npm start
 
 ## Visualization
 
-![](./images/data.png)
+![Data visualization](./images/data.png)
 
 End result is hosted on [github pages](https://chelseadoeleman.github.io/functional-programming/)
 
@@ -133,9 +135,9 @@ With [Wouter's wrapper]() it was possible to return more than 20 results in the 
 
 These are some sketches I made beforehand. So browsing through Observable and bl.ocks would be easier, because I would know what to look for. It also gave me an overview of what I might be able to realise in the amount of time that I had and with my Javascript skills. The first sketch required some merging of two different graphs, which would make reading the data harder than it should be and also more difficult to realise with D3. Which is a complex program in itself.
 
-![](./images/viz1.jpg)
+![Pie Chart and Bar Graph](./images/viz1.jpg)
 
-![](./images/viz2.jpg)
+![Line Graph](./images/viz2.jpg)
 
 
 In the end it was suprising to see that there weren't that many female publishers before 2000, wether this is because of the other Api used to connect a gender to an author name remains possible. Especially because it could not get authors that used their initials and last name. For example Harry Potter and the Goblet of fire, was released in 2000, but the Api couldn't connect J.K rowling to the gender female... So there is definitely room for improvement there, but for now it works. And still shows some interesting results. 
@@ -175,6 +177,12 @@ These are the people that helped me the most while programming. Either by asking
 * MDN web tools
 * [Grouped bar chart](https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad)
 * [Tooltips](http://bl.ocks.org/d3noob/a22c42db65eb00d4e369)
+
+## Tools
+
+* [lodash.range]()
+To get a range of publication years, where you define a start and endpoint. As an alternative you could write a loop, but this isn't functional ofcourse! 🙃
+
 
 ## License
 This repository is licensed as [MIT](license) by [Chelsea Doeleman](https://github.com/chelseadoeleman), 2018
